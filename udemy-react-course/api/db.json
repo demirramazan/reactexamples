@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "name": "Ramazan Demir",
+      "department": "Yazılım Geliştirme",
+      "salary": "15000",
+      "id": "id-1"
+    },
+    {
+      "name": "Zeynep Demir",
+      "department": "Bilişim",
+      "salary": "1500",
+      "id": "id-2"
+    },
+    {
+      "name": "Rümeysa Nil Sena",
+      "department": "Donanım",
+      "salary": "8000",
+      "id": "j6MCFk4"
+    },
+    {
+      "name": "Ahsen Hifa Nur Demir",
+      "department": "Yazılım",
+      "salary": "1200",
+      "id": "TvjTd9o"
+    },
+    {
+      "name": "Abdullah Demir",
+      "department": "Yazılım",
+      "salary": "10000",
+      "id": "J8yuRJ4"
+    }
+  ]
+}
