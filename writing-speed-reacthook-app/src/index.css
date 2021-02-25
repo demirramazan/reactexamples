@@ -1,0 +1,19 @@
+html, body, #root, app-layout {
+    height: 100%;
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+.bg-dark hr {
+    border-color: lightcoral;
+}
+
+.bg-light hr {
+    border-color: black;
+}
+
+.bg-open-gray {
+    background-color: #303030 !important;
+}
