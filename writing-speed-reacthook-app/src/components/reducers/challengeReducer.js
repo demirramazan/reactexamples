@@ -16,6 +16,6 @@ export const challengeReducer = (state, action) => {
                 selected: action.selected
             }
         default:
-                break;
+            break;
     }
 }

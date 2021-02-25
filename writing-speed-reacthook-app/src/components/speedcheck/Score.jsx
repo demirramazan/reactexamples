@@ -10,12 +10,13 @@ export const Score = ({values}) => {
     const {selected} = useContext(ChallengeContext);
     const addResultHandler = () => {
         const id = uniqid();
-
-        addResult({
+        const newResult = {
             id: id,
             challengeId: selected,
             scores: values
-        })
+        }
+        // dispatch({type: 'ADD_RESULT', newResult})
+        addResult(newResult)
 
     }
     return (

@@ -1,5 +1,6 @@
-import React, {useState, createContext} from "react";
+import React, {createContext, useEffect, useState} from "react";
 import uniqid from "uniqid";
+
 export const ChallengeResultContext = createContext(undefined);
 
 const INITIAL_RESULT = [
@@ -24,7 +25,11 @@ const INITIAL_RESULT = [
 ]
 
 const ChallegeResultContextProvider = (props) => {
-    const [results, setResults] = useState(INITIAL_RESULT);
+    const [results, setResults] = useState( () => {
+        const challenges = localStorage.getItem('results');
+        const result = challenges ? JSON.parse(challenges) : INITIAL_RESULT;
+        return result;
+    });
 
     const addResult = (result) => {
         setResults([
@@ -32,6 +37,9 @@ const ChallegeResultContextProvider = (props) => {
             result
         ])
     }
+    useEffect(() => {
+        localStorage.setItem('results', JSON.stringify(results));
+    })
     return (
         <ChallengeResultContext.Provider value={{results: [...results], addResult}}>
             {props.children}

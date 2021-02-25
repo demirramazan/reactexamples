@@ -6,9 +6,9 @@ import ChallengeList from "./ChallengeList"
 export default function Challenges() {
     return (
         <div>
-           <AddChallenge/>
-           <hr/>
-           <ChallengeList/>
+            <AddChallenge/>
+            <hr/>
+            <ChallengeList/>
         </div>
     )
 }

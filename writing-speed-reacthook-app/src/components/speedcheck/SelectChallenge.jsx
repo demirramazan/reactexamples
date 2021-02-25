@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import {ChallengeContext} from "../../contexts/ChallengeContext";
 
-const SelectChallenge = () => {
+const SelectChallenge = (props) => {
 
     // const {challenges, selected, selectedChallenge} = useContext(ChallengeContext);
     const {challenges, selected, dispatch} = useContext(ChallengeContext);
@@ -15,6 +15,7 @@ const SelectChallenge = () => {
         dispatch({
             type: 'SELECTED_CHALLENGE', selected: Number(e.target.value)
         })
+        props.setResult(null)
     }
 
     return (

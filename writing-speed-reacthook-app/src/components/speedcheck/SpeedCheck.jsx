@@ -20,7 +20,7 @@ export default class SpeedCheck extends Component {
     render() {
         return (
             <React.Fragment>
-                <SelectChallenge/>
+                <SelectChallenge setResult={this.setResultScore}/>
                 <hr/>
                 <Info/>
                 <hr/>

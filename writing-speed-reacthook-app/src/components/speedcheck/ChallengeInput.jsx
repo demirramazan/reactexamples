@@ -1,4 +1,4 @@
-import React, {useContext, useState, useEffect} from 'react'
+import React, {useContext, useEffect, useState} from 'react'
 import {ChallengeContext} from "../../contexts/ChallengeContext";
 
 const INITIAL_STATE = {
@@ -110,11 +110,14 @@ const ChallengeInput = (props) => {
             wordsPerMinute
         }
     }
-
+    const handlePaste = () => {
+        return false;
+    };
     return (
         <React.Fragment>
             <div className="input-group mb-3">
-                <input type="text" className="form-control" name="entry" value={state.entry} disabled={state.isDisabled}
+                <input type="text" className="form-control" onPaste={handlePaste} name="entry" value={state.entry}
+                       disabled={state.isDisabled}
                        autoComplete="off"
                        onChange={changeHandler}
                        placeholder="Metni Giriniz"/>
